@@ -1,0 +1,95 @@
+{
+    "fearless_beginner": {
+        "name": "Fearless Beginner",
+        "description": "Answered more than 5 question",
+        "threshold": 5
+    },
+    "love_story_enthusiast": {
+        "name": "Love Story Enthusiast",
+        "description": "Answered more than 50 questions",
+        "threshold": 50
+    },
+    "red_hot_player": {
+        "name": "Red Hot Player",
+        "description": "Answered more than 200 questions",
+        "threshold": 200
+    },
+    "1989_master": {
+        "name": "1989 Master",
+        "description": "Answered more than 500 questions",
+        "threshold": 500
+    },
+    "reputation_legend": {
+        "name": "Reputation Legend",
+        "description": "Answered more than 1000 questions",
+        "threshold": 1000
+    },
+    "lover_of_lyrics": {
+        "name": "Lover of Lyrics",
+        "description": "Answered more than 200 lyrics questions",
+        "threshold": 200
+    },
+    "swift_pro": {
+        "name": "Swift Pro",
+        "description": "Answered more than 200 Taylor questions",
+        "threshold": 200
+    },
+    "speak_now_streak": {
+        "name": "Speak Now Streak",
+        "description": "Maintained more than 30 streaks",
+        "threshold": 30
+    },
+    "evermore_streak": {
+        "name": "Evermore Streak",
+        "description": "Maintained more than 100 streaks",
+        "threshold": 100
+    },
+    "shake_it_off_quick": {
+        "name": "Shake It Off Quick",
+        "description": "Answered 50 question in under 10 seconds",
+        "threshold": 10
+    },
+    "style_icon": {
+        "name": "Style Icon",
+        "description": "Participated in games across more than 10 different groups",
+        "threshold": 10
+    },
+    "delicate_streak": {
+        "name": "Delicate Streak",
+        "description": "Maintained more than 50 streaks",
+        "threshold": 50
+    },
+    "cardigan_collector": {
+        "name": "Cardigan Collector",
+        "description": "Earned more than 5000 points in total",
+        "threshold": 5000
+    },
+    "willow_wizard": {
+        "name": "Willow Wizard",
+        "description": "Get 500 correct answers and 50 quick answers.",
+        "threshold": {
+        "correct": 500,
+        "quick": 50
+    }
+},
+    "bad_blood_buster": {
+        "name": "Bad Blood Buster",
+        "description": "Answered more than 50 incorrect questions",
+        "threshold": 50
+    },
+    "22_enthusiast": {
+        "name": "22 Enthusiast",
+        "description": "Answered more than 100 questions",
+        "threshold": 100
+    },
+    "long_live_legend": {
+        "name": "Long Live Legend",
+        "description": "Maintained more than 200 streaks",
+        "threshold": 200
+    },
+    "swiftie_supreme": {
+        "name": "Swiftie Supreme",
+        "description": "Unlocked all achievements",
+        "threshold": 1
+    }
+}
