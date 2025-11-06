@@ -122,17 +122,12 @@ git pull
 git add .
 git commit -m "Updated bot features"
 git push
-💖 Support
-If you enjoy using this bot and want to support further development:
 
-💰 PayPal: paypal.me/NexusModWorks
-
-⭐ Telegram Stars: Available within the bot’s donation system
 
 👨‍💻 Author
 Hamza Hafeel
-🎓 Information Science & Engineering Student
-💬 Telegram: @HamzaHafeel
+🎓 Computer Science & Engineering Student
+💬 Telegram: @ZenoAFK
 🌐 GitHub: Hamza-Hafeel
 
 📜 License
