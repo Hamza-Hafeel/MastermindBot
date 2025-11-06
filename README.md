@@ -1,66 +1,45 @@
-MastermindBot
-A multilingual, feature-rich Telegram quiz bot built with Python, Telethon, and python-telegram-bot
-MastermindBo.t is an interactive Telegram quiz bot that brings engaging, multilingual trivia games to Telegram groups.
-It includes leaderboards, achievements, streak tracking, and image-based scoreboards, all powered by a PostgreSQL backend and dynamic image generation.
+<h1 align="center">🧠 MastermindBot</h1>
+<p align="center">
+  <b>A multilingual, feature-rich Telegram quiz bot built with Python, Telethon, and python-telegram-bot.</b><br>
+  Developed by <a href="https://github.com/Hamza-Hafeel">Hamza Hafeel</a> 💻
+</p>
 
-🚀 Features
-✅ Multilingual quizzes (English, Arabic, French, German, Italian, Spanish, Russian, Korean, Japanese, Portuguese, Turkish, and more)
-✅ Taylor Swift & Lyrics-based quiz modes 🎶
-✅ Achievements and streak systems to reward consistent players
-✅ Dynamic leaderboards using custom image templates
-✅ Secure PostgreSQL integration for scalable data management
-✅ Real-time score updates with caching and async operations
-✅ Join-channel enforcement, banlist, and admin commands
-✅ Responsive design — works perfectly in both private chats and groups
+---
 
-🗂️ Folder Structure
-MastermindBot/
-├── Bot.py                      # Main bot script (entry point)
-│
-├── Data/
-│   ├── config.json             # Contains API keys, database DSN, etc.
-│   ├── achievements.json       # Achievement thresholds and names
-│   ├── banned_groups.json      # List of restricted groups
-│   ├── excepted_groups.json    # Groups excluded from limitations
-│   ├── localization.json       # Translations for supported languages
-│   ├── logo.png                # Bot logo or branding
-│
-├── Fonts/                      # Fonts for image-based leaderboards
-│   ├── NotoSans-ExtraBold.ttf
-│   ├── NotoSansJP-ExtraBold.ttf
-│   ├── NotoSansKR-ExtraBold.ttf
-│   ├── NotoNaskhArabic-Bold.ttf
-│
-├── Leaderboard-Template/       # Base images for multilingual leaderboards
-│   ├── Leaderboard_en.jpg
-│   ├── Leaderboard_es.jpg
-│   ├── Leaderboard_ar.jpg
-│   ├── Leaderboard_fr.jpg
-│   └── ... (other languages)
-│
-├── Streaks-Template/           # Base images for streak visuals
-│   ├── Streaks_en.jpg
-│   ├── Streaks_es.jpg
-│   ├── Streaks_fr.jpg
-│   └── ... (other languages)
-│
-├── Questions/                  # Quiz question data
-│   ├── General_questions.json
-│   └── Lyrics_questions.json
-│
-├── requirements.txt            # Python dependencies
-└── bot_session.session         # Telethon session (auto-generated)
+## 🚀 About
+MastermindBot is an interactive **Telegram quiz bot** that delivers fun, multilingual trivia experiences for groups and individuals.  
+It includes **achievements, leaderboards, streaks, and personalized profiles**, all powered by a PostgreSQL backend and **dynamic image generation** with Pillow (PIL).
 
-⚙️ Installation & Setup
-1️⃣ Clone the repository
+---
+
+## ✨ Features
+- 🌍 **Multilingual support** (English, Arabic, French, German, Italian, Spanish, Russian, Korean, Japanese, Portuguese, Turkish, and more)
+- 🎶 **Taylor Swift & Lyrics-based** quiz modes
+- 🏆 **Achievements and Streak Rewards** for active players
+- 🖼️ **Dynamic image leaderboards** powered by Pillow
+- 🗄️ **PostgreSQL integration** for scalable performance
+- ⚙️ **Admin panel**, **banned/allowed group system**
+- 🔒 **Join-channel enforcement** for access control
+- ⚡ Fully asynchronous — smooth and responsive performance
+- 💬 Works flawlessly in **private chats and group chats**
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
 git clone git@github.com:Hamza-Hafeel/MastermindBot.git
 cd MastermindBot
+2️⃣ Install Python Dependencies
+Make sure you have Python 3.9+, then run:
 
-2️⃣ Install Python dependencies
-Make sure you have Python 3.9+ installed, then run:
-
+bash
+Copy code
 pip install -r requirements.txt
 requirements.txt
+text
+Copy code
 aiohttp
 aiolimiter
 apscheduler
@@ -71,10 +50,11 @@ requests
 telethon
 python-telegram-bot
 certifi
+3️⃣ Configure Your Bot
+Edit the file Data/config.json and add your credentials:
 
-3️⃣ Configure your bot
-Edit the file Data/config.json and replace it with your credentials:
-
+json
+Copy code
 {
   "BOT_TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
   "API_ID": "YOUR_TELEGRAM_API_ID",
@@ -82,68 +62,81 @@ Edit the file Data/config.json and replace it with your credentials:
   "REPORT_GROUP_ID": "-1001234567890",
   "POSTGRES_DSN": "postgresql://user:password@localhost:5432/MastermindBot"
 }
-⚠️ Important: Never share your config.json publicly — it contains sensitive keys.
+⚠️ Never share your config.json publicly — it contains secrets and tokens.
 
 4️⃣ Setup PostgreSQL Database
-Make sure PostgreSQL is running and create a database:
-CREATE DATABASE MastermindBot;
-Then update the connection string inside config.json accordingly.
+Make sure PostgreSQL is installed and create a database:
 
-5️⃣ Run the bot 🎯
-Start your bot with:
+sql
+Copy code
+CREATE DATABASE MastermindBot;
+Then update your config.json connection string with your database credentials.
+
+5️⃣ Run the Bot 🎯
+Once everything is configured:
+
+bash
+Copy code
 python Bot.py
-Once running, open Telegram and start your bot using /start.
+Then open Telegram and start your bot with /start.
 
 💬 Bot Commands
 Command	Description
 /start	Start or restart the bot
 /leaderboard	View group leaderboard
-/streak	Show current streak rankings
-/profile	View your stats and achievements
-/settings	Admin panel to configure group settings
+/streak	Show streak rankings
+/profile	View personal achievements and stats
+/settings	Admin settings menu
 /reportquestion	Report incorrect questions
-/stats	Show global bot statistics
-/sq	Send question manually (admin only)
+/stats	View global bot statistics
+/sq	Send quiz question manually (admin only)
 
 🏆 Achievements
-Achievements are automatically unlocked as users play.
-Examples:
-
 Achievement	Requirement
 🥉 Fearless Beginner	Answer 5 questions
 🥈 Love Story Enthusiast	Answer 50 questions
 🥇 Reputation Legend	Answer 1000 questions
-🔥 Speak Now Streak	Maintain 30+ daily streaks
+🔥 Speak Now Streak	Maintain a 30+ day streak
 💫 Swiftie Supreme	Unlock all achievements
+
 🖼️ Dynamic Leaderboards
-The bot automatically generates image-based leaderboards in different languages using Pillow (PIL) and custom font files located in /Fonts/.
-Each leaderboard image is based on the templates stored in /Leaderboard-Template/.
+Leaderboards and streak banners are generated dynamically using Pillow (PIL).
+Each image adapts to the user’s language and data, producing a clean and engaging visual for groups.
 
-🔒 Security & Permissions
-The bot enforces join requirements for certain channels.
-Admin-only features are protected with role checks.
-Sensitive data (tokens, DSNs) should never be shared publicly.
-Banned and excepted group IDs are managed via JSON files.
+🔒 Security
+Sensitive files like config.json and .session are excluded via .gitignore
 
-💾 Useful Commands for Developers
-# Pull latest updates from GitHub
+Admin-only commands require elevated permissions
+
+Channel join verification for user access
+
+Safe exception handling for errors and spam control
+
+💾 Developer Commands
+bash
+Copy code
+# Pull the latest updates
 git pull
 
-# Add and push new local changes
+# Add and push new commits
 git add .
 git commit -m "Updated bot features"
 git push
+💖 Support
+If you enjoy using this bot and want to support further development:
 
+💰 PayPal: paypal.me/NexusModWorks
+
+⭐ Telegram Stars: Available within the bot’s donation system
+
+👨‍💻 Author
 Hamza Hafeel
 🎓 Information Science & Engineering Student
 💬 Telegram: @HamzaHafeel
 🌐 GitHub: Hamza-Hafeel
 
 📜 License
-This project is licensed under the MIT License —
-You are free to use, modify, and distribute this code as long as proper credit is given.
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it responsibly — with credit to the original author.
 
-🧩 Notes
-Works perfectly on Ubuntu, Windows, and cloud VPS (Oracle, Render, etc.)
-Recommended Python version: 3.10 or newer
-Make sure all .json data files are UTF-8 encoded for multilingual compatibility.
+<h3 align="center">💻 Built with ❤️, Python, and endless dedication ☕</h3> ```
