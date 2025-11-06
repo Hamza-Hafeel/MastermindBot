@@ -38,11 +38,12 @@ bash
 git clone git@github.com:Hamza-Hafeel/MastermindBot.git
 cd MastermindBot
 <h3>2️⃣ Install Python Dependencies</h3> <p>Make sure you have <b>Python 3.9+</b> installed, then run:</p>
-bash
-Copy code
-pip install -r requirements.txt
-<h4>📦 If you don’t have requirements.txt, create one:</h4>
 
+bash
+pip install -r requirements.txt
+
+<h4>📦 If you don’t have requirements.txt, create one:</h4>
+ <table>
 aiohttp
 aiolimiter
 apscheduler
@@ -53,8 +54,9 @@ requests
 telethon
 python-telegram-bot
 certifi
-
+ </table>
 <h3>3️⃣ Configure Your Bot</h3> <p>Edit <code>Data/config.json</code> and enter your details:</p>
+ <table>
 json
 {
   "BOT_TOKEN": "YOUR_TELEGRAM_BOT_TOKEN",
@@ -63,6 +65,7 @@ json
   "REPORT_GROUP_ID": "-1001234567890",
   "POSTGRES_DSN": "postgresql://user:password@localhost:5432/MastermindBot"
 }
+ </table>
 ⚠️ Never share your config.json publicly — it contains private credentials.
 
 <h3>4️⃣ Setup PostgreSQL Database</h3> <p>Create a new PostgreSQL database for the bot:</p>
