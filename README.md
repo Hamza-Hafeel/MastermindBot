@@ -34,16 +34,14 @@ It includes <b>leaderboards</b>, <b>achievements</b>, <b>streak tracking</b>, an
 
 <h3>1️⃣ Clone the Repository</h3>
 
-```bash
-git clone git@github.com:Hamza-Hafeel/MastermindBot.git
-cd MastermindBot
-<h3>2️⃣ Install Python Dependencies</h3> <p>Make sure you have <b>Python 3.9+</b> installed, then run:</p>
 bash
-Copy code
-pip install -r requirements.txt
+```git clone git@github.com:Hamza-Hafeel/MastermindBot.git
+cd MastermindBot
+<h3>2️⃣ Install Python Dependencies</h3> <p>Make sure you have <b>Python 3.9+</b> installed, then run:</p> ```
+
+``` pip install -r requirements.txt ```
 <h4>📦 If you don’t have requirements.txt, create one:</h4>
-text
-Copy code
+```
 aiohttp
 aiolimiter
 apscheduler
@@ -53,7 +51,7 @@ pytz
 requests
 telethon
 python-telegram-bot
-certifi
+certifi ```
 <h3>3️⃣ Configure Your Bot</h3> <p>Edit <code>Data/config.json</code> and enter your details:</p>
 json
 Copy code
@@ -93,4 +91,4 @@ git push
 <h2>💖 Support</h2> <p>If you’d like to support ongoing development:</p> <ul> <li>💰 <b>PayPal:</b> <a href="https://paypal.me/NexusModWorks">paypal.me/NexusModWorks</a></li> <li>⭐ <b>Telegram Stars:</b> Available in the bot’s donation menu</li> </ul>
 <h2>👨‍💻 Author</h2> <p> <b>Hamza Hafeel</b><br> 🎓 Information Science & Engineering Student<br> 💬 Telegram: <a href="https://t.me/HamzaHafeel">@HamzaHafeel</a><br> 🌐 GitHub: <a href="https://github.com/Hamza-Hafeel">Hamza-Hafeel</a> </p>
 <h2>📜 License</h2> <p> This project is licensed under the <b>MIT License</b>. You may modify, reuse, and distribute it — but please give proper credit. </p>
-<h3 align="center">💻 Built with ❤️, Python, and dedication ☕</h3> ```
+<h3 align="center">💻 Built with ❤️, Python, and dedication ☕</h3>
